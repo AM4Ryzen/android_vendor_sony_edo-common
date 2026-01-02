@@ -20,9 +20,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/sony/edo-common/proprietary/odm/bin/sony_ext_uim_ctrl:$(TARGET_COPY_OUT_ODM)/bin/sony_ext_uim_ctrl \
     vendor/sony/edo-common/proprietary/odm/etc/init/sony_ext_uim_ctrl.rc:$(TARGET_COPY_OUT_ODM)/etc/init/sony_ext_uim_ctrl.rc \
-    vendor/sony/edo-common/proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk:$(TARGET_COPY_OUT_PRODUCT)/app/QtiTelephonyService/QtiTelephonyService.apk \
-    vendor/sony/edo-common/proprietary/product/app/embms/embms.apk:$(TARGET_COPY_OUT_PRODUCT)/app/embms/embms.apk \
-    vendor/sony/edo-common/proprietary/product/app/uceShimService/uceShimService.apk:$(TARGET_COPY_OUT_PRODUCT)/app/uceShimService/uceShimService.apk \
     vendor/sony/edo-common/proprietary/product/bin/dpmd:$(TARGET_COPY_OUT_PRODUCT)/bin/dpmd \
     vendor/sony/edo-common/proprietary/product/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/dpm/dpm.conf \
     vendor/sony/edo-common/proprietary/product/etc/init/dpmd.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/dpmd.rc \
@@ -107,8 +104,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/edo-common/proprietary/product/lib64/vendor.qti.ims.rcsconfig@1.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.ims.rcsconfig@1.1.so \
     vendor/sony/edo-common/proprietary/product/lib64/vendor.qti.imsrtpservice@2.0.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.0.so \
     vendor/sony/edo-common/proprietary/product/lib64/vendor.qti.imsrtpservice@2.1.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/vendor.qti.imsrtpservice@2.1.so \
-    vendor/sony/edo-common/proprietary/product/priv-app/dpmserviceapp/dpmserviceapp.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/dpmserviceapp/dpmserviceapp.apk \
-    vendor/sony/edo-common/proprietary/product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk \
     vendor/sony/edo-common/proprietary/system/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM)/bin/wfdservice \
     vendor/sony/edo-common/proprietary/system/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/wfdservice.rc \
     vendor/sony/edo-common/proprietary/system/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/audiosphere.xml \
@@ -252,10 +247,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/edo-common/proprietary/system/lib64/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfduibcsinkinterface.so \
     vendor/sony/edo-common/proprietary/system/lib64/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfduibcsrc.so \
     vendor/sony/edo-common/proprietary/system/lib64/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libwfduibcsrcinterface.so \
-    vendor/sony/edo-common/proprietary/vendor/app/CACertService/CACertService.apk:$(TARGET_COPY_OUT_VENDOR)/app/CACertService/CACertService.apk \
-    vendor/sony/edo-common/proprietary/vendor/app/CneApp/CneApp.apk:$(TARGET_COPY_OUT_VENDOR)/app/CneApp/CneApp.apk \
-    vendor/sony/edo-common/proprietary/vendor/app/IWlanService/IWlanService.apk:$(TARGET_COPY_OUT_VENDOR)/app/IWlanService/IWlanService.apk \
-    vendor/sony/edo-common/proprietary/vendor/app/TimeService/TimeService.apk:$(TARGET_COPY_OUT_VENDOR)/app/TimeService/TimeService.apk \
     vendor/sony/edo-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/sony/edo-common/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/sony/edo-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
@@ -1658,7 +1649,9 @@ PRODUCT_COPY_FILES += \
     vendor/sony/edo-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    libantradio \
     libfastcvopt \
+    libplatformconfig \
     libta \
     libthermalclient \
     vendor.qti.hardware.fm@1.0 \
@@ -1668,5 +1661,14 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne.constants@2.0 \
     com.quicinc.cne.constants@2.1 \
     WfdService \
+    CACertService \
+    CneApp \
+    IWlanService \
+    TimeService \
+    QtiTelephonyService \
+    embms \
+    uceShimService \
+    dpmserviceapp \
     ims \
+    qcrilmsgtunnel \
     WfdCommon
